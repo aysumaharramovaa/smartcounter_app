@@ -3,7 +3,7 @@ import React from 'react';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { HapticTab } from '@/components/haptic-tab';
-import { Ionicons } from '@expo/vector-icons'; // Expo yolu
+import { Ionicons } from '@expo/vector-icons'; 
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();

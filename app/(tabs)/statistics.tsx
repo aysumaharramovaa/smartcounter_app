@@ -91,7 +91,7 @@ export default function ExploreScreen() {
             fromZero
             chartConfig={chartConfig}
             style={styles.chart}
-            verticalLabelRotation={monthArray.length > 3 ? 90 : 0} // illikdə yazılar dik
+            verticalLabelRotation={monthArray.length > 3 ? 90 : 0} 
           />
         </View>
       );
