@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 45,
     paddingTop: 60,
-    backgroundColor: "#F5F7FA",
+   backgroundColor: '#f5f5f5', 
   },
   sectionTitle: {
     fontSize: 26,
