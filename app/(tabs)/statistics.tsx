@@ -92,8 +92,8 @@ export default function ExploreScreen() {
       const data = getDataForService(service, monthArray);
       const chartWidth =
         selectedTab === "yearly"
-          ? Dimensions.get("window").width - 24 + 30 * (monthArray.length - 12) 
-          : Dimensions.get("window").width - 24; 
+          ? Dimensions.get("window").width - 24 + 30 * (monthArray.length - 12)
+          : Dimensions.get("window").width - 24;
 
       return (
         <View key={service} style={styles.chartContainer}>
@@ -106,7 +106,7 @@ export default function ExploreScreen() {
             chartConfig={chartConfig}
             style={[
               styles.chart,
-              selectedTab === "yearly" && { marginLeft: -15},
+              selectedTab === "yearly" && { marginLeft: -15 },
             ]}
             verticalLabelRotation={monthArray.length > 3 ? 90 : 0}
           />
@@ -116,7 +116,6 @@ export default function ExploreScreen() {
 
   return (
     <ScrollView style={styles.container}>
-      {/* Tab Selector */}
       <View style={styles.tabContainer}>
         <TouchableOpacity
           style={[
@@ -167,7 +166,7 @@ const styles = StyleSheet.create({
   },
   tabContainer: {
     flexDirection: "row",
-    
+
     marginBottom: 20,
     justifyContent: "center",
   },
@@ -181,7 +180,7 @@ const styles = StyleSheet.create({
   tabButtonActive: { borderBottomColor: "#007AFF" },
   tabText: { fontSize: 16, color: "#555" },
   tabTextActive: { fontSize: 16, color: "#007AFF", fontWeight: "bold" },
-  chartContainer: {marginBottom: 30 },
+  chartContainer: { marginBottom: 30 },
   chart: { borderRadius: 12, marginLeft: 0 },
   chartTitle: { fontSize: 20, fontWeight: "bold", marginBottom: 10 },
 });
