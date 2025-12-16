@@ -1,10 +1,9 @@
-import { Tabs } from "expo-router";
-import React from "react";
-
-import { HapticTab } from "@/components/haptic-tab";
-import { IconSymbol } from "@/components/ui/icon-symbol";
-import { Colors } from "@/constants/theme";
-import { useColorScheme } from "@/hooks/use-color-scheme";
+import { Tabs } from 'expo-router';
+import React from 'react';
+import { Colors } from '@/constants/theme';
+import { useColorScheme } from '@/hooks/use-color-scheme';
+import { HapticTab } from '@/components/haptic-tab';
+import { Ionicons } from '@expo/vector-icons'; // Expo yolu
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -12,7 +11,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
         tabBarButton: HapticTab,
       }}
@@ -20,37 +19,29 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
-          ),
+          title: "Ödənişlərim",
+          tabBarIcon: ({ color }) => <Ionicons name="card" size={28} color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="statistics"
         options={{
-          title: "Statistics",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
-          ),
+          title: "Statistika",
+          tabBarIcon: ({ color }) => <Ionicons name="stats-chart" size={28} color={color} />,
         }}
       />
       <Tabs.Screen
         name="savings"
         options={{
           title: "Qənaət",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="banknote.fill" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <Ionicons name="wallet" size={28} color={color} />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: "Profil",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="person.fill" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <Ionicons name="person" size={28} color={color} />,
         }}
       />
     </Tabs>
